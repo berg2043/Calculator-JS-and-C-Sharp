@@ -1,0 +1,68 @@
+body{
+  background-color: gray;
+  color: white;
+  width: 800px;
+  margin: auto;
+}
+
+.calculator{
+  display:grid;
+  grid-template: repeat(5,30px)/repeat(6, 30px);
+}
+
+#math-visual{
+ grid-area: 1/1/ span 1/ span 5;
+ height: 22px;
+ margin-top: 2px;
+}
+#clear{
+  grid-area: 1/6;
+}
+#seven{
+  grid-area: 2/1;
+}
+#eight{
+  grid-area: 2/2;
+}
+#nine{
+  grid-area: 2/3;
+}
+#plus{
+  grid-area: 2/4;
+}
+#four{
+  grid-area: 3/1;
+}
+#five{
+  grid-area: 3/2;
+}
+#six{
+  grid-area: 3/3;
+}
+#minus{
+  grid-area: 3/4;
+}
+#one{
+  grid-area: 4/1;
+}
+#two{
+  grid-area: 4/2;
+}
+#three{
+  grid-area: 4/3;
+}
+#multiply{
+  grid-area: 4/4;
+}
+#zero{
+  grid-area: 5/1;
+}
+#dot{
+  grid-area: 5/2;
+}
+#equals{
+  grid-area: 5/3;
+}
+#divide{
+  grid-area: 5/4;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./vendors/jquery.min.js"></script>
+  <script src="./scripts/client.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Janky Calculator</h1>
+  </header>
+  <main>
+    <h1 id="output">0</h1>
+    <section class="calculator">
+      <input id="math-visual" disabled>
+      <button id="clear">C</button>
+      <button class ="input-button" id="seven">7</button>
+      <button class ="input-button" id="eight">8</button>
+      <button class ="input-button" id="nine">9</button>
+      <button class ="input-button operator" id="plus">+</button>
+      <button class ="input-button" id="four">4</button>
+      <button class ="input-button" id="five">5</button>
+      <button class ="input-button" id="six">6</button>
+      <button class ="input-button operator" id="minus">-</button>
+      <button class ="input-button" id="one">1</button>
+      <button class ="input-button" id="two">2</button>
+      <button class ="input-button" id="three">3</button>
+      <button class ="input-button operator" id="multiply">*</button>
+      <button class ="input-button" id="zero">0</button>
+      <button class ="input-button" id="dot">.</button>
+      <button id="equals">=</button>
+      <button class ="input-button operator" id="divide">/</button>
+    </section>
+    <section>
+      <button id='clear-history'>Clear History</button>
+      <ul id="history"></ul>
+    </section>
+  </main>
+</body>
+</html>
