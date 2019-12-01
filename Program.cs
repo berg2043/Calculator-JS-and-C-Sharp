@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Test.Api.Data;
+using Calculator.Api.Data;
 
 
-namespace Test.Api
+namespace Calculator.Api
 {
   public class Program
   {
@@ -25,13 +25,13 @@ namespace Test.Api
               webBuilder.UseStartup<Startup>();
             });
     // Seeds Database to test GET
-    private static void SeedDatabase(IHost host)
+    /* private static void SeedDatabase(IHost host)
     {
       var scopeFactory = host.Services.GetRequiredService<IServiceScopeFactory>();
 
       using (var scope = scopeFactory.CreateScope())
       {
-        var context = scope.ServiceProvider.GetRequiredService<TestContext>();
+        var context = scope.ServiceProvider.GetRequiredService<CalculatorContext>();
 
         if (context.Database.EnsureCreated())
         {
@@ -46,6 +46,6 @@ namespace Test.Api
           }
         }
       }
-    }
+    }*/ 
   }
 }
