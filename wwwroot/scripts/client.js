@@ -46,7 +46,8 @@ function inputClick(){
 function equalsClick(){
   let el = $('#math-visual')
   if(Number(el.val().charAt(el.val().length-1))){
-    postMath(getValues());
+    // postMath(getValues());
+    postMath({Equation: 'test', Answer: 5})
     $('.operator').attr('disabled',false);
     el.val('')
   } else {
@@ -80,7 +81,7 @@ function getValues(){
 function getMath(){
   $.ajax({
     type: 'GET',
-    url: '/math'
+    url: '/MathHistories'
   }).then(function(response){
     appendHistory(response);
   }).catch(function(err){
@@ -91,9 +92,14 @@ function getMath(){
 
 // Posts the euation to the server
 function postMath(payload){
+  console.log('in post');
+  console.log(payload);
   $.ajax({
     type: 'POST',
-    url: '/math',
+    // contentType: "application/json; charset=utf-8",
+    url: '/MathHistories',
+    // dataType: "json",
+    // data: "{ Equation: test, Answer: test }"
     data: payload
   }).then(function(response){
     getAnswer();
@@ -107,7 +113,7 @@ function postMath(payload){
 function deleteHistory(){
   $.ajax({
     type: 'DELETE',
-    url: '/math'
+    url: '/MathHistories'
   }).then(function(response){
     getMath();
   }).catch(function(err){
