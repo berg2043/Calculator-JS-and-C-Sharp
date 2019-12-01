@@ -11,9 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using Test.Api.Data;
+using Calculator.Api.Data;
 
-namespace Test.Api
+namespace Calculator.Api
 {
   public class Startup
   {
@@ -27,9 +27,9 @@ namespace Test.Api
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-      // Uses context to interact with local db "Test"
-      services.AddDbContext<TestContext>(options =>
-          options.UseInMemoryDatabase("Test"));
+      // Uses context to interact with local db "Calculator"
+      services.AddDbContext<CalculatorContext>(options =>
+          options.UseInMemoryDatabase("Calculator"));
       services.AddControllers();
     }
 

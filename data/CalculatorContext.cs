@@ -1,13 +1,13 @@
 using Microsoft.EntityFrameworkCore;
-using Test.Api.Models;
+using Calculator.Api.Models;
 
 // Name to call later
-namespace Test.Api.Data
+namespace Calculator.Api.Data
 {
   // Class to interact with database
-  public class TestContext : DbContext
+  public class CalculatorContext : DbContext
   {
-    public TestContext(DbContextOptions<TestContext> options)
+    public CalculatorContext(DbContextOptions<CalculatorContext> options)
         : base(options)
     {
     }

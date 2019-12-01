@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
 // Name to call later
-namespace Test.Api.Models
+namespace Calculator.Api.Models
 {
   // Class for future equations to be stored using
   public class MathHistory

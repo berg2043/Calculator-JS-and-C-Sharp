@@ -2,13 +2,13 @@ using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Test.Api.Models;
+using Calculator.Api.Models;
 
-namespace Test.Api.Data
+namespace Calculator.Api.Data
 {
     public static class SeedData
     {
-        public static void Initialize(TestContext context)
+        public static void Initialize(CalculatorContext context)
         {
             if (!context.MathHistories.Any())
             {

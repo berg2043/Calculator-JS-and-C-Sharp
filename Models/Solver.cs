@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace Test.Api.Models
+namespace Calculator.Api.Models
 {
   public class MathSolver
   {

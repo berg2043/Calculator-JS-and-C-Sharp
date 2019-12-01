@@ -4,18 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Test.Api.Data;
-using Test.Api.Models;
+using Calculator.Api.Data;
+using Calculator.Api.Models;
 
-namespace Test.Api.Controllers
+namespace Calculator.Api.Controllers
 {
   [ApiController]
   [Route("[controller]")]
   public class MathHistoriesController : ControllerBase
   {
-    private readonly TestContext _context;
+    private readonly CalculatorContext _context;
 
-    public MathHistoriesController(TestContext context)
+    public MathHistoriesController(CalculatorContext context)
     {
       _context = context;
     }
