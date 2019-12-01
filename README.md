@@ -14,11 +14,11 @@ in local memory through `Microsoft.EntityFrameworkCore.InMemory`.
 
 ## Installation
 
-1. Run `dotnet restore ` to install required packages
+1. Run `dotnet build` to build the project and it's dependencies
 2. Run `dotnet ./bin/Debug/netcoreapp3.0/Calculator.Api.dll` for powershell \
 `dotnet ./bin/Debug/netcoreapp3.0/Calculator.Api.dll \`\
     `> Calculator.Api.log &` for bash/terminal
-3. Startup should run and automatically open `localhost:5001`
+3. Navigate to [localhost:5001](localhost:5001)
 
 ## Usage
 
