@@ -42,6 +42,8 @@ namespace Test.Api.Controllers
     [HttpPost]
     public async Task<ActionResult<MathHistory>> Create(MathHistory mathHistory)
     {
+      // Runs equation through SolveMath to return an answer
+      mathHistory.Answer = MathSolver.SolveMath(mathHistory.Equation);
       _context.MathHistories.Add(mathHistory);
       await _context.SaveChangesAsync();
 
