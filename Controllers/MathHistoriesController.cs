@@ -49,8 +49,13 @@ namespace Test.Api.Controllers
 
       return CreatedAtAction(nameof(GetById), new { id = mathHistory.Id }, mathHistory);
     }
-    // PUT action
-
     // DELETE action
+    [HttpDelete]
+    public async Task<ActionResult> Delete()
+    {
+      _context.MathHistories.RemoveRange(_context.MathHistories);
+      await _context.SaveChangesAsync();
+      return NoContent();
+    }
   }
 }
