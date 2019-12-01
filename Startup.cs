@@ -36,6 +36,11 @@ namespace Test.Api
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
+      DefaultFilesOptions defoptions = new DefaultFilesOptions();
+      defoptions.DefaultFileNames.Clear();
+      defoptions.DefaultFileNames.Add("index.html");
+      app.UseDefaultFiles(defoptions);
+      app.UseStaticFiles();
 
       if (env.IsDevelopment())
       {
