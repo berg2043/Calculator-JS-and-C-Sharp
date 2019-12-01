@@ -12,6 +12,7 @@ namespace Test.Api.Models
     public string Equation { get; set; }
 
     [Required]
-    public double Answer { get; set; }
+    // public double Answer { get; set; }
+    public string Answer { get; set; }
   }
 }
