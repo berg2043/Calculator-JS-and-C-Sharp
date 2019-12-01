@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -38,14 +39,14 @@ namespace Test.Api.Controllers
       return product;
     }
     // POST action
-    // [HttpPost]
-    // public async Task<ActionResult<MathHistory>> Create(MathHistory MathHistory)
-    // {
-    //   _context.MathHistories.Add(MathHistory);
-    //   await _context.SaveChangesAsync();
+    [HttpPost]
+    public async Task<ActionResult<MathHistory>> Create(MathHistory mathHistory)
+    {
+      _context.MathHistories.Add(mathHistory);
+      await _context.SaveChangesAsync();
 
-    //   return CreatedAtAction(nameof(GetById), new { id = MathHistory.Id }, MathHistory);
-    // }
+      return CreatedAtAction(nameof(GetById), new { id = mathHistory.Id }, mathHistory);
+    }
     // PUT action
 
     // DELETE action
