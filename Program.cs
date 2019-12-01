@@ -14,7 +14,7 @@ namespace Test.Api
     {
       var host = CreateHostBuilder(args).Build();
       // Seeds Database to test GET
-      SeedDatabase(host);
+      // SeedDatabase(host);
       host.Run();
     }
 
