@@ -8,27 +8,28 @@ using Test.Api.Models;
 
 namespace Test.Api.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class MathHistoriesController : ControllerBase
+  [ApiController]
+  [Route("[controller]")]
+  public class MathHistoriesController : ControllerBase
+  {
+    private readonly TestContext _context;
+
+    public MathHistoriesController(TestContext context)
     {
-        private readonly TestContext _context;
-
-        public MathHistoriesController(TestContext context)
-        {
-            _context = context;
-        }
-
-        [HttpGet]
-        public ActionResult<List<MathHistory>> GetAll() =>
-            _context.MathHistories.ToList();
-
-        // GET by ID action
-
-        // POST action
-
-        // PUT action
-
-        // DELETE action
+      _context = context;
     }
+
+    // Get Request returns all
+    [HttpGet]
+    public ActionResult<List<MathHistory>> GetAll() =>
+        _context.MathHistories.ToList();
+
+    // GET by ID action
+
+    // POST action
+
+    // PUT action
+
+    // DELETE action
+  }
 }
