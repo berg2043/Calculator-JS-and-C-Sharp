@@ -96,11 +96,9 @@ function postMath(payload){
   console.log(payload);
   $.ajax({
     type: 'POST',
-    // contentType: "application/json; charset=utf-8",
+    contentType: "application/json",
     url: '/MathHistories',
-    // dataType: "json",
-    // data: "{ Equation: test, Answer: test }"
-    data: payload
+    data: JSON.stringify({Equation: "test", Answer: 8})
   }).then(function(response){
     getAnswer();
     getMath();
