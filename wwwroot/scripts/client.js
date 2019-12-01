@@ -46,8 +46,7 @@ function inputClick(){
 function equalsClick(){
   let el = $('#math-visual')
   if(Number(el.val().charAt(el.val().length-1))){
-    // postMath(getValues());
-    postMath({Equation: 'test', Answer: 5})
+    postMath(getValues());
     $('.operator').attr('disabled',false);
     el.val('')
   } else {
@@ -98,9 +97,9 @@ function postMath(payload){
     type: 'POST',
     contentType: "application/json",
     url: '/MathHistories',
-    data: JSON.stringify({Equation: "test", Answer: 8})
+    data: JSON.stringify({Equation: payload.input})
   }).then(function(response){
-    getAnswer();
+    $('#output').text(response.answer);
     getMath();
   }).catch(function(err){
     alert('Error with post math');
@@ -116,19 +115,6 @@ function deleteHistory(){
     getMath();
   }).catch(function(err){
     alert('Error with delete math');
-    console.log(err);
-  })
-}
-
-//Gets the latest answer from the server
-function getAnswer(){
-  $.ajax({
-    type: 'GET',
-    url: '/answer'
-  }).then(function(response){
-    $('#output').text(response.answer);
-  }).catch(function(err){
-    alert('Error with get answer');
     console.log(err);
   })
 }
