@@ -16,12 +16,12 @@ namespace Test.Api.Data
                     new MathHistory
                     {
                         Equation = "Squeaky Bone",
-                        Answer = "20.99m"
+                        Answer = 20.99
                     },
                     new MathHistory
                     {
                         Equation = "Knotted Rope",
-                        Answer = "12.99m"
+                        Answer = 12.99
                     }
                 );
 
