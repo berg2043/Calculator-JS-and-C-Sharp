@@ -67,7 +67,7 @@ function operatorClick(){
   $('.operator').attr('disabled',true);
 }
 
-// Testing ground for future serverside logic (how to do the math)
+// Gets the input and returns it
 function getValues(){
   let input = {
     input: $('#math-visual').val()
