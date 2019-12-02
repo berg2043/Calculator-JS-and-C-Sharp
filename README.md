@@ -18,7 +18,7 @@ in local memory through `Microsoft.EntityFrameworkCore.InMemory`.
 2. Run `dotnet ./bin/Debug/netcoreapp3.0/Calculator.Api.dll` for powershell \
 `dotnet ./bin/Debug/netcoreapp3.0/Calculator.Api.dll \`\
     `> Calculator.Api.log &` for bash/terminal
-3. Navigate to [localhost:5001](localhost:5001)
+3. Navigate to [localhost:5001](https://localhost:5001)
 
 ## Usage
 
@@ -70,7 +70,7 @@ provided resources to lookup how methods worked
 answered questions I had on the way
 
 What did you find most challenging?
-- c# is type safe, so it took a while to get used to declaring the variable
+- C# is type safe, so it took a while to get used to declaring the variable
 type before defining it.  After that, getting the server to spin up took quite a
 while.  I didn't realize it had been up for a while, but didn't have a default
 page for localhost:5001.  The final hurdle was getting ajax to ineract with the
