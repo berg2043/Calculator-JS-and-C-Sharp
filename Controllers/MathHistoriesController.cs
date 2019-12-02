@@ -29,14 +29,14 @@ namespace Calculator.Api.Controllers
     [HttpGet("{id}")]
     public async Task<ActionResult<MathHistory>> GetById(long id)
     {
-      var product = await _context.MathHistories.FindAsync(id);
+      var history = await _context.MathHistories.FindAsync(id);
 
-      if (product == null)
+      if (history == null)
       {
         return NotFound();
       }
 
-      return product;
+      return history;
     }
     // POST action
     [HttpPost]
